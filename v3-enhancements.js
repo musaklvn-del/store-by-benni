@@ -1,14 +1,14 @@
 (()=>{
 const PHONE='+234 901 467 9963';
 const IG='@storebybenni.ng';
-const CONTACT={address:'',phone:PHONE,tiktok:'',facebook:'',instagram:IG};
+const CONTACT={address:'Shop 19B, 2nd Floor, Pual & Mike Plaza, 40 Balogun, Lagos Island.',phone:PHONE,tiktok:'@storebybenny',facebook:'store.by.benny',instagram:IG};
 window.BENNI_CONTACT=CONTACT;
 window.BENNI_VARIANTS=window.BENNI_VARIANTS||{};
 
 function injectContact(){
  const footer=document.querySelector('footer'); if(!footer||document.getElementById('contact')) return;
  const s=document.createElement('section'); s.id='contact'; s.className='section contact-section';
- s.innerHTML=`<div class="sectionhead"><div><div class="eyebrow">CONTACT STORE BY BENNI</div><h2>We’re here to help.</h2></div><p>Visit us, call us, or connect with us on social media. We’ll be happy to help with products, colours, availability and orders.</p></div><div class="contact-grid"><div class="contact-card"><span>⌖</span><h3>Physical Store</h3><p>${CONTACT.address||'Store address will be added here.'}</p></div><div class="contact-card"><span>☎</span><h3>Phone / WhatsApp</h3><p><a href="https://wa.me/2349014679963" target="_blank">${CONTACT.phone}</a></p></div><div class="contact-card"><span>◎</span><h3>Instagram</h3><p><a href="https://instagram.com/storebybenni.ng" target="_blank">${CONTACT.instagram}</a></p></div><div class="contact-card"><span>♪</span><h3>TikTok</h3><p>${CONTACT.tiktok||'Handle will be added here.'}</p></div><div class="contact-card"><span>f</span><h3>Facebook</h3><p>${CONTACT.facebook||'Handle will be added here.'}</p></div></div>`;
+ s.innerHTML=`<div class="sectionhead"><div><div class="eyebrow">CONTACT STORE BY BENNI</div><h2>We’re here to help.</h2></div><p>Visit us, call us, or connect with us on social media. We’ll be happy to help with products, colours, availability and orders.</p></div><div class="contact-grid"><div class="contact-card"><span>⌖</span><h3>Physical Store</h3><p>${CONTACT.address}</p></div><div class="contact-card"><span>☎</span><h3>Phone / WhatsApp</h3><p><a href="https://wa.me/2349014679963" target="_blank">${CONTACT.phone}</a></p></div><div class="contact-card"><span>◎</span><h3>Instagram</h3><p><a href="https://instagram.com/storebybenni.ng" target="_blank">${CONTACT.instagram}</a></p></div><div class="contact-card"><span>♪</span><h3>TikTok</h3><p><a href="https://www.tiktok.com/@storebybenny" target="_blank">${CONTACT.tiktok}</a></p></div><div class="contact-card"><span>f</span><h3>Facebook</h3><p><a href="https://www.facebook.com/store.by.benny" target="_blank">${CONTACT.facebook}</a></p></div></div>`;
  footer.parentNode.insertBefore(s,footer);
 }
 
