@@ -1,0 +1,1 @@
+(()=>{window.BENNI_VARIANTS=window.BENNI_VARIANTS||{};const P=[{src:'assets/pinko-brown.jpg',label:'Brown',filter:'none'},{src:'assets/pinko-burgundy.jpg',label:'Burgundy',filter:'none'},{src:'assets/pinko-black.jpg',label:'Black',filter:'none'}];window.BENNI_VARIANTS.shoulder=P;window.BENNI_VARIANTS.pinko=P;})();
