@@ -1,0 +1,1 @@
+(()=>{const l=document.createElement('link');l.rel='stylesheet';l.href='v3-mobile.css';document.head.appendChild(l)})();
