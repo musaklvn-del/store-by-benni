@@ -1,0 +1,20 @@
+(()=>{
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+function init(){
+ const hero=$('.hero'), shop=$('#shop'), grid=$('#grid'); if(!hero||!shop||!grid)return;
+ hero.querySelector('.eyebrow').textContent='WELCOME TO';
+ hero.querySelector('h1').innerHTML='STORE BY <span>BENNI</span>';
+ hero.querySelector('p').textContent='Timeless style. Premium quality. Just for you.';
+ const acts=hero.querySelector('.actions'); acts.innerHTML='<a class="btn primary" href="#shop">SHOP NOW ›</a><a class="btn secondary" href="#shop">NEW ARRIVALS</a>';
+ hero.querySelector('.heroart img').alt='Store by Benni featured bag';
+ hero.insertAdjacentHTML('afterend',`<div class="v4-trust"><div>♢<b>100% ORIGINAL</b><span>Authentic Products</span></div><div>▱<b>FAST DELIVERY</b><span>Across Nigeria</span></div><div>♧<b>CUSTOMER CARE</b><span>We're here to help</span></div><div>♧<b>SECURE PAYMENT</b><span>Pay with confidence</span></div></div><div class="v4-title"><h2>SHOP BY CATEGORY</h2><a href="#shop">View all ›</a></div><div class="v4-cats"><a class="v4-cat" href="#shop" onclick="setCategory('Bags',document.querySelectorAll('.chip')[1])"><img src="assets/polene.jpg"><div><b>BAGS</b><span>Explore Collection</span></div></a><a class="v4-cat" href="#shop" onclick="setCategory('Shoes',document.querySelectorAll('.chip')[2])"><img src="assets/zara.jpg"><div><b>SHOES</b><span>Explore Collection</span></div></a></div><div class="v4-title v4-feature-title"><h2>FEATURED PRODUCTS</h2><a href="#shop">View all ›</a></div>`);
+ const wrap=document.createElement('div');wrap.className='v4-product-wrap';grid.parentNode.insertBefore(wrap,grid);wrap.appendChild(grid);wrap.insertAdjacentHTML('afterbegin','<button class="v4-arrow left" aria-label="Previous products">‹</button>');wrap.insertAdjacentHTML('beforeend','<button class="v4-arrow right" aria-label="Next products">›</button>');
+ $('.v4-arrow.left',wrap).onclick=()=>grid.scrollBy({left:-grid.clientWidth*.82,behavior:'smooth'});$('.v4-arrow.right',wrap).onclick=()=>grid.scrollBy({left:grid.clientWidth*.82,behavior:'smooth'});
+ const dots=document.createElement('div');dots.className='v4-dots';dots.innerHTML='<i class="active"></i><i></i><i></i>';hero.appendChild(dots);
+ const bottom=document.createElement('nav');bottom.className='v4-bottom';bottom.innerHTML='<a href="#top"><i>⌂</i>Home</a><a href="#shop"><i>⊞</i>Categories</a><a href="#shop"><i>♡</i>Wishlist</a><a href="#shop" onclick="openCart()"><i>🛒</i>Cart</a><a href="#why"><i>♙</i>Account</a>';document.body.appendChild(bottom);
+ window.BENNI_VARIANTS=window.BENNI_VARIANTS||{};
+ const obs=new MutationObserver(()=>enhanceCards());obs.observe(grid,{childList:true}); enhanceCards();
+ function enhanceCards(){ $$('.card',grid).forEach(card=>{if(card.dataset.v4)return;card.dataset.v4='1';const img=$('.photo img',card);if(!img)return;const id=(img.src.split('/').pop()||'').split('.')[0];const variants=window.BENNI_VARIANTS[id]||[{src:img.getAttribute('src'),label:'Default',filter:'none'}];if(variants.length<2)return;let idx=0;const apply=v=>{img.src=v.src||v;img.style.filter=v.filter||'none';};const photo=$('.photo',card);const dots=document.createElement('div');dots.className='v4-color-dots';variants.forEach((v,i)=>{const b=document.createElement('button');b.setAttribute('aria-label',v.label||('Colour '+(i+1)));b.title=v.label||('Colour '+(i+1));b.style.cssText='width:10px;height:10px;border-radius:50%;border:1px solid #aaa;background:#'+['111','7b1e2b','d8c3a0','eee','8b5a2b'][i%5]+';padding:0;margin:0 3px';b.onclick=e=>{e.stopPropagation();idx=i;apply(v)};dots.appendChild(b)});apply(variants[0]);photo.parentNode.insertBefore(dots,photo.nextSibling)});}
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();

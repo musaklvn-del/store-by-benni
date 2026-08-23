@@ -1,0 +1,13 @@
+:root{--v3-ink:#171214;--v3-gold:#b9903c;--v3-cream:#f8f3ee;--v3-line:#e6dcd5}
+/* V3 mobile-first hero: compact header, faint oversized brand watermark, shorter first viewport */
+.nav{background:rgba(255,255,255,.96);backdrop-filter:blur(14px);box-shadow:0 4px 22px rgba(23,18,20,.06)}
+.logo{width:46px;height:46px}.brand{font-size:19px}
+.hero{position:relative;isolation:isolate;background:linear-gradient(180deg,#fbf7f2 0%,#f3ece6 100%);overflow:hidden}
+.hero:before{content:'BENNI';position:absolute;z-index:-1;left:-5%;top:4%;font:900 clamp(110px,30vw,330px)/.8 Georgia,serif;letter-spacing:-.08em;color:rgba(185,144,60,.075);pointer-events:none;white-space:nowrap}
+.heroin{min-height:0;padding:44px 20px 42px;grid-template-columns:1fr;gap:24px}
+.hero h1{font-size:clamp(44px,13vw,68px);line-height:.9;margin:13px 0}.hero p{font-size:14px;line-height:1.65;max-width:520px}.eyebrow{font-size:10px;letter-spacing:.24em}.actions{margin-top:20px;gap:9px}.btn{padding:12px 17px;font-size:11px}
+.heroart{width:min(190px,52vw);margin:0 auto}.heroart:before{inset:5% -8% -8% 5%;border-radius:25px}.heroart img{border-radius:22px;box-shadow:0 18px 45px rgba(57,25,39,.14)}
+.trust{margin-top:20px;gap:10px;font-size:10px}.trust span{background:rgba(255,255,255,.58);padding:7px 9px;border-radius:999px}
+.section{padding:52px 16px}.sectionhead{margin-bottom:22px}.sectionhead h2{font-size:34px}.sectionhead p{font-size:12px}.grid{gap:11px}.card{border-radius:16px}.photo{aspect-ratio:1}.body{padding:11px}.body h3{font-size:14px;margin:5px 0}.body p{font-size:10px;min-height:30px}.price{font-size:14px}.add{padding:8px 9px;font-size:9px}.tag{top:8px;left:8px;font-size:8px;padding:5px 7px}
+.bandin{padding:52px 16px}.band h2{font-size:35px}.features{gap:11px}.feature{padding:18px;border-radius:15px}
+@media(min-width:561px){.hero:before{top:-5%}.heroin{grid-template-columns:1fr .7fr;padding:58px 24px}.heroart{width:auto;max-width:330px}.hero{min-height:0}}

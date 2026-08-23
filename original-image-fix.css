@@ -1,0 +1,6 @@
+/* Preserve the supplied product photographs exactly as supplied. */
+.photo{background:#fff!important}
+.photo img{object-fit:contain!important;mix-blend-mode:normal!important;filter:none!important;transform:none!important}
+.card:hover .photo img{transform:none!important;filter:none!important}
+.detail img{object-fit:contain!important;mix-blend-mode:normal!important;filter:none!important}
+.v4-cat img{mix-blend-mode:normal!important;filter:none!important}

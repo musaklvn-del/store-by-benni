@@ -1,0 +1,13 @@
+Store by Benni image update
+=============================
+Updated the product image assets to use the WhatsApp product photos already present in public/images/products.
+Product groups mapped:
+- SIMMI: 5 photos
+- POLENE: 3 photos
+- ZARA: 2 photos
+- Shoulder Bag: 3 photos
+- TOTE BAG: 2 photos
+- PINKO: 3 photos
+- CHICK Everyday Cross Bag: 3 photos
+
+The existing product IDs and asset paths are preserved so the cart, product detail and checkout logic continue to use the same product records.
