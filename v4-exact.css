@@ -1,4 +1,13 @@
 /* Store by Benni V4 — poster-inspired luxury storefront */
+.navin:before,.navin:after{display:none!important}
+.v4-icon{display:grid;place-items:center;min-width:44px;min-height:44px;padding:6px;border:0;background:transparent;color:#d9a32b;font-size:24px}
+.v4-menu-button{order:1}.v4-search-button{order:4;margin-left:auto;font-size:32px}
+.v4-menu{padding:8px 16px 16px;background:#050505;color:#d9a32b;display:flex;flex-direction:column;gap:4px}
+.v4-menu[hidden]{display:none}.v4-menu a{padding:14px;min-height:44px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #c99420!important;outline-offset:3px}
+#shop{scroll-margin-top:80px}#why,#contact{scroll-margin-top:80px}
+#store-search.v4-search-open{display:flex!important;flex-wrap:wrap;max-width:1200px;margin:0 auto 20px;padding:12px 16px;gap:10px}
+#store-search .search{min-width:180px}#search-status{flex-basis:100%;margin:0;font-size:12px;color:var(--muted)}
 :root{--v4-black:#050505;--v4-gold:#c99420;--v4-cream:#f7f0e8;--v4-paper:#fffdfb;--v4-line:#e8dfd6;--v4-muted:#6c6865}
 body{background:var(--v4-paper)!important;color:#111!important;font-family:Arial,Helvetica,sans-serif!important;padding-bottom:72px!important}
 .announce{display:none!important}.nav{position:sticky!important;top:0!important;background:var(--v4-black)!important;border:0!important;box-shadow:0 3px 15px rgba(0,0,0,.18)!important;z-index:80!important}.navin{height:58px!important;max-width:none!important;padding:0 15px!important;justify-content:space-between!important}.navin .logo{display:none!important}.navin .brand{order:2;position:absolute;left:50%;transform:translateX(-50%);flex:none!important;color:#d3a33b!important;font:700 13px/1 Georgia,serif!important;text-align:center!important;letter-spacing:.12em!important;text-transform:uppercase!important;width:125px}.navin .brand:before{content:'SB';display:block;font:400 31px/.75 Georgia,serif!important;letter-spacing:-.12em;color:#d8a42e}.navin .brand i{display:block;color:#d8a42e!important;font:700 9px/1 Arial,sans-serif!important;letter-spacing:.18em;text-transform:uppercase}.links{display:none!important}.navbtn{display:none!important}.cartbtn{order:3;background:transparent!important;border:0!important;color:#d9a32b!important;padding:6px!important;font-size:0!important}.cartbtn:before{content:'♧';font-size:27px;display:inline-block;transform:rotate(180deg)}.count{width:15px!important;height:15px!important;background:#d7a02b!important;color:#111!important;font-size:8px!important;margin-left:-7px!important;vertical-align:top!important}
