@@ -44,7 +44,7 @@
       if (!product(id)?.colours) return open(id);
       openOptions(id);
       // Keep the additional gallery views alongside the order selections.
-      const extraViews = {
+      const extraViews = product(id).gallery || {
         classyChic: ['assets/classy-chic-black-top.jpg', 'assets/classy-chic-black-side.jpg'],
         stylishCrossbody: ['assets/stylish-crossbody-white-wear.jpg'],
         zara: ['assets/zara-alt.jpg']
