@@ -3,6 +3,7 @@ const PHONE='+234 901 467 9963';
 const CONTACT={address:'Shop 19B, 2nd Floor, Pual & Mike Plaza, 40 Balogun, Lagos Island.',phone:PHONE,tiktok:'@storebybenny',facebook:'store.by.benny',instagram:'@storebybenni.ng'};
 window.BENNI_CONTACT=CONTACT;
 window.BENNI_VARIANTS={
+ ...window.BENNI_VARIANTS,
  simmi:[
   {src:'assets/simmi.jpg',label:'Burgundy',filter:'none'},
   {src:'assets/simmi-brown.jpg',label:'Brown',filter:'none'},
